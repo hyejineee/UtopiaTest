@@ -68,8 +68,14 @@
 .content .button-box {
     position: absolute;
     color : white;
-    top : 10px;
+    top : 50%;
+    left: 50%;
+    transform: translateX(-50%);
     display: none;
+}
+
+.content .button-box li{
+    margin-bottom: 10px;
 }
 
 
