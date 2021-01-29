@@ -2,7 +2,7 @@
   "name": "UtopiaTest",
   "version": "1.0.0",
   "description": "",
-  "homepage" : "https://hyejineee.github.io/UtopiaTest/",
+  "homepage": "https://hyejineee.github.io/UtopiaTest/",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "gh-pages": "^3.1.0"
+  },
+  "dependencies": {
+    "jsgif": "^1.0.2"
   }
 }

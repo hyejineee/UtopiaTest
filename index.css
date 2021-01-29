@@ -65,4 +65,11 @@
     width: 100%;
 }
 
+.content .button-box {
+    position: absolute;
+    color : white;
+    top : 10px;
+    display: none;
+}
+
 
