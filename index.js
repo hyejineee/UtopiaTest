@@ -17,6 +17,7 @@ const showButtonBox = (questionIndex)=>{
 }
 
 
+
 const callback = ()=>{
     
     const image = document.getElementById('background-image')
@@ -29,6 +30,8 @@ const callback = ()=>{
     const questionIndex = image.getAttribute('value')*1
     setTimeout(()=>showButtonBox(questionIndex), gifPlayTime[questionIndex-1])
 }
+
+
 
 const handleClickTypeButton = (type)=>{
     const image = document.getElementById('background-image')
