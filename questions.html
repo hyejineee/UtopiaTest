@@ -3,6 +3,17 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
         <link rel="stylesheet" href="index.css">
+        <script>
+            function preloading (imageArray) {
+                 let n = imageArray.length; 
+                 for (let i = 0; i < n; i++) { 
+                     let img = new Image(); 
+                     img.src = `./images/imageArray[i]`; 
+                    } 
+                }
+                preloading([ '1.gif', '2.gif', '3.gif' ])
+
+        </script>
         
         <title> utopia</title>
     </head>
@@ -38,7 +49,7 @@
             </div> 
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></scr>
         <script src="./index.js"></script>
         <script>
             $('#background-image').load(()=>{
