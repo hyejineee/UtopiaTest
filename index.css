@@ -66,6 +66,7 @@
 }
 
 .content .button-box {
+    width: 90%;
     position: absolute;
     color : white;
     top : 50%;
@@ -74,8 +75,17 @@
     display: none;
 }
 
-.content .button-box li{
-    margin-bottom: 10px;
+.content .button-box button{
+    background-color: #00000000;
+    border : none;
+    padding :0;
+    display: inline-block;
+    margin-bottom: 20px;
 }
+
+.content .button-box li img {
+    width: 100%;
+    height: auto;
+}   
 
 

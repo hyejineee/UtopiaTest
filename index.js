@@ -1,6 +1,6 @@
 
 
-const gifPlayTime = [9000,15000,14000,8000,8000,7000,11000,14000,12000]
+const gifPlayTime = [15000,14000,8000,8000,7000,11000,14000,12000]
 
 const score = {
     type1 : 0,
@@ -9,22 +9,45 @@ const score = {
     type4 : 0,
 }
 
-const showButtonBox = ()=>{
-    document.getElementById("background-image").src = "./images/1.png"
+const showButtonBox = (questionIndex)=>{
+    document.getElementById("background-image").src = `./images/${questionIndex}.png`
     let box = document.getElementsByClassName("button-box")[0]
     box.style.display= "block"
+
 }
 
 
 const callback = ()=>{
-    const imgIndex = document.getElementById('background-image').getAttribute('value')*1-1
-    setTimeout(()=>showButtonBox(), gifPlayTime[imgIndex])
+    
+    const image = document.getElementById('background-image')
+    const regex = /([^\s]+(?=\.(png)))/
+
+    if (regex.test(image.src)){
+        return
+    }
+
+    const questionIndex = image.getAttribute('value')*1
+    setTimeout(()=>showButtonBox(questionIndex), gifPlayTime[questionIndex-1])
 }
 
-const handleClickTypeButton = ()=>{
-    
-}
+const handleClickTypeButton = (type)=>{
+    const image = document.getElementById('background-image')
 
-const handleClickNextButton = ()=>{
-    
+    const nextQuestionIndex = image.getAttribute('value')*1+1
+
+    if((nextQuestionIndex-1) !== 8) {
+        score[type] += 1
+    }
+
+    image.src = `./images/${nextQuestionIndex}.gif`
+    image.setAttribute('value', nextQuestionIndex)
+
+    const buttons = document.getElementsByClassName('button-image')[0]
+
+    Array(buttons).forEach((element, i) => {
+        element.src = `./images/buttons/question${nextQuestionIndex}buttons/button_${i}.png`
+    });
+
+    let box = document.getElementsByClassName("button-box")[0]
+    box.style.display= "none"
 }

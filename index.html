@@ -3,18 +3,39 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
         <link rel="stylesheet" href="index.css">
+        <script>
 
+            const showButtonBox = ()=>{
+                document.getElementById("background-image").src = `./images/intro.png`
+                let box = document.getElementsByClassName("button-box")[0]
+                box.style.display= "block"
+            }
+
+            const timer = ()=> {
+                const questionIndex = document.getElementById('background-image').getAttribute('value')*1
+                setTimeout(()=> showButtonBox(), 9000)
+            }
+        </script>
         <title> utopia</title>
     </head>
 
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" src="./images/1.gif" onload="callback()" value="1">
+                <img id="background-image" src="./images/intro.gif" onload="timer()">
                 <div class="button-box">
                     <ul>
-                        <li><a href="./questions.html">dd</a></li>
-                        <li></li>
+                        <li>
+                            <a href="./questions.html">
+                                <img src="./images/buttons/introButtons/1.png">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./questions.html">
+                                <img src="./images/buttons/introButtons/2.png">
+                            </a> 
+                        </li>
                     </ul>
                 </div>
             </div> 
