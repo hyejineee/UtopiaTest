@@ -3,9 +3,10 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
         <link rel="stylesheet" href="index.css">
+        <script src="./index.js"></script>
         <script>
 
-            const showButtonBox = ()=>{
+            const introButton = ()=>{
                 document.getElementById("background-image").src = `./images/intro.png`
                 let box = document.getElementsByClassName("button-box")[0]
                 box.style.display= "block"
@@ -13,24 +14,12 @@
 
             const timer = ()=> {
                 const questionIndex = document.getElementById('background-image').getAttribute('value')*1
-                setTimeout(()=> showButtonBox(), 9000)
+                setTimeout(()=> introButton(), 9000)
             }
 
 
         </script>
 
-        <script>
-            function preloading (imageArray) {
-
-                for (let i = 1; i < 9; i++) { 
-                    let img = new Image(); 
-                    img.src = `./images/${i}.gif`; 
-                    } 
-                }
-                
-            preloading()
-
-        </script>
         <title> utopia</title>
     </head>
 
