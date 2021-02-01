@@ -27,7 +27,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" src='./images/0.gif'>
+                <img id="background-image" src='./images/0.gif' onload="timer()">
                 <div class="button-box">
                     <ul>
                         <li>
@@ -51,10 +51,6 @@
 
 
     <script>
-       
-        $('#background-image').load(()=>{
-            timer()
-        })
     
     </script>
     
