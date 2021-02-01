@@ -5,13 +5,14 @@
         <link rel="stylesheet" href="index.css">
         <script>
             function preloading (imageArray) {
-                 let n = imageArray.length; 
-                 for (let i = 0; i < n; i++) { 
+
+                 for (let i = 1; i < 9; i++) { 
                      let img = new Image(); 
-                     img.src = `./images/${imageArray[i]}`; 
+                     img.src = `./images/${i}.gif`; 
                     } 
                 }
-            preloading([ '1.gif', '2.gif', '3.gif' ])
+                
+            preloading()
 
         </script>
         
@@ -21,7 +22,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" src="./images/1.gif" value="1">
+                <img id="background-image" value="1" onload="callback()">
                 <div class="button-box">
                     <ul>
                         <li>
@@ -52,9 +53,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="./index.js"></script>
         <script>
-            $('#background-image').load(()=>{
+            $(window).load(()=>{
                 console.log('로딩완료')
-                callback()
+                $('#background-image').attr('src', './images/1.gif') 
             })
         </script>
     </body>
