@@ -18,9 +18,12 @@
             }
 
             const preloading = ()=>{
-                for (let i = 1; i < 4; i++) { 
-                    let img = new Image(); 
-                    img.src = `./images/${i}.gif`; 
+                for (let i = 1; i < 5; i++) { 
+                    let gifImg = new Image(); 
+                    gifImg.src = `./images/${i}.gif`; 
+
+                    let pngImg = new Image()
+                    pngImg.src = `./images/${i}.png`; 
                 } 
             }
 
@@ -33,7 +36,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" src="./images/intro.gif" onload="timer()">
+                <img id="background-image" src="./images/intro.gif">
                 <div class="button-box">
                     <ul>
                         <li>
@@ -52,5 +55,21 @@
             </div> 
         </div>
     </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <script>
+        $(window).load(()=>{
+            loadingImage()
+        })
+
+        const loadingImage = ()=>{
+            $('#background-image').load(()=>{
+            timer();
+        })
+        }
+        
+    </script>
     
 </html>
