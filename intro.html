@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="init.css">
+        <script src="./index.js"></script>
+        <script>
+
+            const introButton = ()=>{
+                document.getElementById("background-image").src = `./images/intro.png`
+                let box = document.getElementsByClassName("button-box")[0]
+                box.style.display= "block"
+            }
+
+            const timer = ()=> {
+                const questionIndex = document.getElementById('background-image').getAttribute('value')*1
+                setTimeout(()=> introButton(), 9000)
+            }
+
+            const preloading = ()=>{
+                for (let i = 1; i < 5; i++) { 
+                    let gifImg = new Image(); 
+                    gifImg.src = `./images/${i}.gif`; 
+
+                    let pngImg = new Image()
+                    pngImg.src = `./images/${i}.png`; 
+                } 
+            }
+
+            preloading()
+        </script>
+
+        <title> utopia</title>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="content">
+                <img id="background-image">
+                <div class="button-box">
+                    <ul>
+                        <li>
+                            <a href="./questions.html">
+                                <img src="./images/buttons/introButtons/1.png">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./questions.html">
+                                <img src="./images/buttons/introButtons/2.png">
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <script>
+        $(window).load(()=>{
+            $('#background-image').attr('src', './images/intro.gif')
+            loadingImage()
+        })
+
+        
+        $('#background-image').load(()=>{
+            timer()
+        })
+        
+        
+    </script>
+    
+</html>

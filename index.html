@@ -2,22 +2,16 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="init.css">
         <script src="./index.js"></script>
         <script>
-
-            const introButton = ()=>{
-                document.getElementById("background-image").src = `./images/intro.png`
-                let box = document.getElementsByClassName("button-box")[0]
-                box.style.display= "block"
-            }
-
-            const timer = ()=> {
-                const questionIndex = document.getElementById('background-image').getAttribute('value')*1
-                setTimeout(()=> introButton(), 9000)
-            }
-
             const preloading = ()=>{
+                let introGif = new Image()
+                introGif.src = './images/intro.gif'
+                
+                let introPng = new Image()
+                introPng.src = './images/intro.png'
+            
                 for (let i = 1; i < 5; i++) { 
                     let gifImg = new Image(); 
                     gifImg.src = `./images/${i}.gif`; 
@@ -30,28 +24,59 @@
             preloading()
         </script>
 
+        <style >
+            .wrap {
+                height: 100vh;
+                width: 100%;
+                background-color: #aaa;
+          
+            }
+
+            .content{
+                position : relative;
+                height: 100vh;
+                width: 100%;
+                background-image: url('./images/bg.png');
+                background-size: cover;
+            }
+
+            .content>img{
+                display: inline-block;
+                width : 90%;
+                height: auto;
+                position: absolute;
+                top :50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                text-align: center;
+
+            }
+
+            .content a {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                height: auto;
+                bottom : 10%;
+
+            }
+
+
+        </style>
+
         <title> utopia</title>
     </head>
 
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image">
-                <div class="button-box">
-                    <ul>
-                        <li>
-                            <a href="./questions.html">
-                                <img src="./images/buttons/introButtons/1.png">
-                            </a>
-                        </li>
 
-                        <li>
-                            <a href="./questions.html">
-                                <img src="./images/buttons/introButtons/2.png">
-                            </a> 
-                        </li>
-                    </ul>
-                </div>
+                <img src="./images/noti_text.png">
+                <a href="./intro.html">
+                    <img src="./images/startButton.png"/>
+                </a>
+            
             </div> 
         </div>
     </body>
