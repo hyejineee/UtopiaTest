@@ -11,7 +11,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" value="1" onload="callback()">
+                <img id="background-image" value="1">
                 <div class="button-box">
                     <ul>
                         <li>
@@ -45,6 +45,12 @@
             $(window).load(()=>{
                 console.log('로딩완료')
                 $('#background-image').attr('src', './images/1.gif') 
+            })
+
+            $('#background-image').load(()=>{
+                console.log('이미지 로딩완료')
+                console.log($('#background-image').attr('value'))
+                callback()
             })
         </script>
     </body>
