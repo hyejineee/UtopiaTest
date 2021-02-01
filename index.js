@@ -18,6 +18,8 @@ const showButtonBox = (questionIndex)=>{
 
 
 const callback = ()=>{
+
+    console.log('callback')
     
     const image = document.getElementById('background-image')
     const regex = /([^\s]+(?=\.(png)))/
