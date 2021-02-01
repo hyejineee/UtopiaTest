@@ -21,7 +21,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" src="./images/1.gif" value="1">
+                <img id="background-image"  value="1" onload="callback()">
                 <div class="button-box">
                     <ul>
                         <li>
@@ -52,16 +52,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="./index.js"></script>
         <script>
-            $(window).load(()=>{
-                console.log('로딩완료')
+            // $(window).load(()=>{
+            //     console.log('로딩완료')
                 
-            })
+            // })
 
-            $('#background-image').load(()=>{
-                console.log('이미지 로딩완료')
-                console.log($('#background-image').attr('value'))
-                callback()
-            })
+            // $('#background-image').load(()=>{
+            //     console.log('이미지 로딩완료')
+            //     console.log($('#background-image').attr('value'))
+            //     callback()
+            // })
         </script>
     </body>
     
