@@ -60,23 +60,20 @@
         </div>
 
         <script>
-            const preloading = ()=>{
-                let introGif = new Image()
-                introGif.src = './images/intro.gif'
-                
-                let introPng = new Image()
-                introPng.src = './images/intro.png'
-            
-                for (let i = 1; i < 5; i++) { 
-                    let gifImg = new Image(); 
-                    gifImg.src = `./images/${i}.gif`; 
-
-                    let pngImg = new Image()
-                    pngImg.src = `./images/${i}.png`; 
-                } 
+           function preload(index) {
+                index = index || 0;
+                if (9 > index) {
+                    var gif = new Image ();
+                    let png = new Image ();
+                    gif.onload = function() {
+                        preload(index + 1);
+                    }
+                    gif.src = `./images/${index}.gif`
+                    png.src = `./images/${index}.png`
+                }
             }
 
-            preloading()
+            preload(0)
         </script>
     </body>
     

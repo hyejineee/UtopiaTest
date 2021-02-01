@@ -8,7 +8,7 @@
         <script>
 
             const introButton = ()=>{
-                document.getElementById("background-image").src = `./images/intro.png`
+                document.getElementById("background-image").src = `./images/0.png`
                 let box = document.getElementsByClassName("button-box")[0]
                 box.style.display= "block"
             }
@@ -18,17 +18,7 @@
                 setTimeout(()=> introButton(), 9000)
             }
 
-            const preloading = ()=>{
-                for (let i = 5; i < 9; i++) { 
-                    let gifImg = new Image(); 
-                    gifImg.src = `./images/${i}.gif`; 
-
-                    let pngImg = new Image()
-                    pngImg.src = `./images/${i}.png`; 
-                } 
-            }
-
-            preloading()
+        
         </script>
 
         <title> utopia</title>
@@ -37,7 +27,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" src='./images/intro.gif'>
+                <img id="background-image" src='./images/0.gif'>
                 <div class="button-box">
                     <ul>
                         <li>
