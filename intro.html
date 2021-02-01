@@ -7,6 +7,20 @@
 
         <script>
 
+        
+            const preload = ()=>{
+                for(let i =3; i<6; i++){
+                    let gif = new Image()
+                    let png = new Image()
+
+                    gif.src = `./images/${i}.gif`
+                    png.src = `./images/${i}.gif`
+                }
+            }
+
+            preload()
+  
+
             const introButton = ()=>{
                 document.getElementById("background-image").src = `./images/0.png`
                 let box = document.getElementsByClassName("button-box")[0]

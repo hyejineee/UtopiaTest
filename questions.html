@@ -6,14 +6,19 @@
         <link rel="stylesheet" href="init.css">
 
         <script>
-            // const preloading = ()=>{
-            //     for (let i = 4; i < 9; i++) { 
-            //         let img = new Image(); 
-            //         img.src = `./images/${i}.gif`; 
-            //     } 
-            // }
+      
+            const preload = ()=>{
+                for(let i =6; i<9; i++){
+                    let gif = new Image()
+                    let png = new Image()
 
-            // preloading()
+                    gif.src = `./images/${i}.gif`
+                    png.src = `./images/${i}.gif`
+                }
+            }
+
+            preload()
+
         </script>     
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
