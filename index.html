@@ -36,7 +36,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" src="./images/intro.gif">
+                <img id="background-image">
                 <div class="button-box">
                     <ul>
                         <li>
@@ -61,14 +61,15 @@
 
     <script>
         $(window).load(()=>{
+            $('#background-image').attr('src', './images/intro.gif')
             loadingImage()
         })
 
-        const loadingImage = ()=>{
-            $('#background-image').load(()=>{
-            timer();
+        
+        $('#background-image').load(()=>{
+            timer()
         })
-        }
+        
         
     </script>
     
