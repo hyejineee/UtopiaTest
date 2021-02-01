@@ -53,12 +53,3 @@ const handleClickTypeButton = (type)=>{
     let box = document.getElementsByClassName("button-box")[0]
     box.style.display= "none"
 }
-
-function preloading (imageArray) {
-
-    console.log('preloading')
-    for (let i = 1; i < 9; i++) { 
-        let img = new Image(); 
-        img.src = `./images/${i}.gif`; 
-    } 
-}
