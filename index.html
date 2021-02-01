@@ -2,27 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-        <link rel="stylesheet" href="init.css">
-        <script src="./index.js"></script>
-        <script>
-            const preloading = ()=>{
-                let introGif = new Image()
-                introGif.src = './images/intro.gif'
-                
-                let introPng = new Image()
-                introPng.src = './images/intro.png'
-            
-                for (let i = 1; i < 5; i++) { 
-                    let gifImg = new Image(); 
-                    gifImg.src = `./images/${i}.gif`; 
-
-                    let pngImg = new Image()
-                    pngImg.src = `./images/${i}.png`; 
-                } 
-            }
-
-            preloading()
-        </script>
+        <link rel="stylesheet" href="init.css">        
 
         <style >
             .wrap {
@@ -71,7 +51,6 @@
     <body>
         <div class="wrap">
             <div class="content">
-
                 <img src="./images/noti_text.png">
                 <a href="./intro.html">
                     <img src="./images/startButton.png"/>
@@ -79,23 +58,26 @@
             
             </div> 
         </div>
+
+        <script>
+            const preloading = ()=>{
+                let introGif = new Image()
+                introGif.src = './images/intro.gif'
+                
+                let introPng = new Image()
+                introPng.src = './images/intro.png'
+            
+                for (let i = 1; i < 5; i++) { 
+                    let gifImg = new Image(); 
+                    gifImg.src = `./images/${i}.gif`; 
+
+                    let pngImg = new Image()
+                    pngImg.src = `./images/${i}.png`; 
+                } 
+            }
+
+            preloading()
+        </script>
     </body>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
-    <script>
-        $(window).load(()=>{
-            $('#background-image').attr('src', './images/intro.gif')
-            loadingImage()
-        })
-
-        
-        $('#background-image').load(()=>{
-            timer()
-        })
-        
-        
-    </script>
     
 </html>
