@@ -54,12 +54,13 @@
         <script>
             $(window).load(()=>{
                 console.log('로딩완료')
-                $('#background-image').attr('src', './images/1.gif') 
+                
             })
 
             $('#background-image').load(()=>{
                 console.log('이미지 로딩완료')
                 console.log($('#background-image').attr('value'))
+                $('#background-image').attr('src', './images/1.gif') 
                 callback()
             })
         </script>
