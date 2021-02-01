@@ -43,7 +43,7 @@ const handleClickTypeButton = (type)=>{
         score[type] += 1
     }
 
-    image.src = `./images/${nextQuestionIndex}.gif`
+    image.src = `./images/${nextQuestionIndex}.webp`
     image.setAttribute('value', nextQuestionIndex)
 
     const buttons = document.getElementsByClassName('button-image')[0]

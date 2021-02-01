@@ -61,12 +61,18 @@
 
         <script>
             const preload = ()=>{
-                for(let i =0; i<3; i++){
-                    let gif = new Image()
+                let introAni = new Image()
+                let introPng = new Image()
+
+                introPng.src = './images/intro.png'
+                introAni.src = './images/intro.webp'
+                
+                for(let i =1; i<4; i++){
+                    let ani = new Image()
                     let png = new Image()
 
-                    gif.src = `./images/${i}.gif`
-                    png.src = `./images/${i}.gif`
+                    gif.src = `./images/${i}.webp`
+                    png.src = `./images/${i}.png`
                 }
             }
 

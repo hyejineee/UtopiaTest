@@ -9,12 +9,12 @@
 
         
             const preload = ()=>{
-                for(let i =3; i<6; i++){
+                for(let i =4; i<7; i++){
                     let gif = new Image()
                     let png = new Image()
 
-                    gif.src = `./images/${i}.gif`
-                    png.src = `./images/${i}.gif`
+                    gif.src = `./images/${i}.webp`
+                    png.src = `./images/${i}.png`
                 }
             }
 
@@ -22,7 +22,7 @@
   
 
             const introButton = ()=>{
-                document.getElementById("background-image").src = `./images/0.png`
+                document.getElementById("background-image").src = `./images/intro.png`
                 let box = document.getElementsByClassName("button-box")[0]
                 box.style.display= "block"
             }
@@ -41,7 +41,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image" src='./images/0.webp' onload="timer()">
+                <img id="background-image" src='./images/intro.webp' onload="timer()">
                 <div class="button-box">
                     <ul>
                         <li>

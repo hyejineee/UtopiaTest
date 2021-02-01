@@ -8,12 +8,12 @@
         <script>
       
             const preload = ()=>{
-                for(let i =6; i<9; i++){
+                for(let i =7; i<9; i++){
                     let gif = new Image()
                     let png = new Image()
 
-                    gif.src = `./images/${i}.gif`
-                    png.src = `./images/${i}.gif`
+                    gif.src = `./images/${i}.webp`
+                    png.src = `./images/${i}.png`
                 }
             }
 
@@ -30,7 +30,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image"  src="./images/1.gif" value="1" onload="callback()">
+                <img id="background-image"  src="./images/2.webp" value="1" onload="callback()">
                 <div class="button-box">
                     <ul>
                         <li>
