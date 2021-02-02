@@ -30,26 +30,26 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image"  src="./images/2.webp" value="1" onload="callback()">
+                <img id="background-image"  src="./images/2.webp" value="1" onload="onLoadHandler()">
                 <div class="button-box">
                     <ul>
                         <li>
-                            <button  type="button" onclick="handleClickTypeButton('type1', )" >
+                            <button  type="button" onclick="handleClickTypeButton('type1')" >
                                 <img class="button-image" src="./images/buttons/question1buttons/button_0.png">
                             </button>
                         </li>
                         <li>
-                            <button type="button" >
+                            <button type="button" onclick="handleClickTypeButton('type2')" >
                                 <img class="button-image" src="./images/buttons/question1buttons/button_1.png">
                             </button>
                         </li>
                         <li>
-                            <button type="button" >
+                            <button type="button" onclick="handleClickTypeButton('type3')">
                                 <img class="button-image" src="./images/buttons/question1buttons/button_2.png">
                             </button>
                         </li>
                         <li>
-                            <button type="button" >
+                            <button type="button" onclick="handleClickTypeButton('type4')">
                                 <img class="button-image" src="./images/buttons/question1buttons/button_3.png">
                             </button>
                         </li>
