@@ -1,6 +1,6 @@
 
 
-const gifPlayTime = [14500,13500,7500,7500,6500,10500,13500,11500]
+const gifPlayTime = [15000,14000,8000,8000,7000,11000,14000,12000]
 
 const score = {
     type1 : 0,
@@ -63,7 +63,7 @@ const clearGridStyle = ()=>{
 const showResultImage = ()=>{
     const [key,] = Object.entries(score)
     .sort(([,a],[,b]) => a-b)[3]
-    
+
     document.getElementById("background-image").src = `./images/${key}.png`
     let box = document.getElementsByClassName("button-box")[0]
     box.style.display= "none"
