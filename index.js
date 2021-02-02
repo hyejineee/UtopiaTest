@@ -29,14 +29,15 @@ const onLoadHandler = ()=>{
 }
 
 const gridStyle = () =>{
-    let box = document.getElementsByClassName("button-box")[0]
+    const box = document.getElementsByClassName("button-box")[0]
    
-    box.style.top ="30%"
+    box.style.top ="25%"
 
     const ul = box.getElementsByTagName('ul')[0]
     ul.style.display ="grid"
     ul.style.gridTemplateColumns = "1fr 1fr"
     ul.style.gridTemplateRows = "1fr 1fr"
+    ul.style.textAlign ="center"
 
     const img = ul.getElementsByTagName('img')
 
@@ -61,12 +62,23 @@ const clearGridStyle = ()=>{
 }
 
 const showResultImage = ()=>{
+    const urls = {
+        type1 : 'https://youtu.be/4P1IPRRGd1k',
+        type2 : 'https://youtu.be/fZ_kO8nyGMs',
+        type3 : 'https://youtu.be/s3yDnr94uPY',
+        type4 : 'https://youtu.be/etrzdTGOJWU'
+    }  
+
     const [key,] = Object.entries(score)
     .sort(([,a],[,b]) => a-b)[3]
 
     document.getElementById("background-image").src = `./images/${key}.png`
-    let box = document.getElementsByClassName("button-box")[0]
+    const box = document.getElementsByClassName("button-box")[0]
     box.style.display= "none"
+
+    const goToUtopia = document.getElementById('go-to-utopia')
+    goToUtopia.style.display = "block"
+    goToUtopia.setAttribute('href', urls[key])
 }
 
 const handleClickTypeButton = (type)=>{
@@ -77,7 +89,6 @@ const handleClickTypeButton = (type)=>{
     const nextQuestionIndex = image.getAttribute('value')*1+1
 
     if(nextQuestionIndex === 9){
-        //결과 페이지로 이동 
         showResultImage()
         return
     }
