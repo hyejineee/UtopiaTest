@@ -4,23 +4,6 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="init.css">
-
-        <script>
-      
-            const preload = ()=>{
-                for(let i =7; i<9; i++){
-                    let gif = new Image()
-                    let png = new Image()
-
-                    gif.src = `./images/${i}.webp`
-                    png.src = `./images/${i}.png`
-                }
-            }
-
-            preload()
-
-        </script>     
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="./index.js"></script>
         
@@ -30,7 +13,7 @@
     <body>
         <div class="wrap">
             <div class="content">
-                <img id="background-image"  src="./images/2.webp" value="1" onload="onLoadHandler()">
+                <img id="background-image"  src="./images/1.webp" value="1" onload="onLoadHandler()">
                 <div class="button-box">
                     <ul>
                         <li>

@@ -6,20 +6,6 @@
         <link rel="stylesheet" href="init.css">
 
         <script>
-
-            const preload = ()=>{
-                for(let i =4; i<7; i++){
-                    let gif = new Image()
-                    let png = new Image()
-
-                    gif.src = `./images/${i}.webp`
-                    png.src = `./images/${i}.png`
-                }
-            }
-
-            preload()
-  
-
             const introButton = ()=>{
                 document.getElementById("background-image").src = `./images/intro.png`
                 let box = document.getElementsByClassName("button-box")[0]
