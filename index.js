@@ -65,7 +65,7 @@ const showResultImage = ()=>{
     const urls = {
         type1 : 'https://youtu.be/4P1IPRRGd1k',
         type2 : 'https://youtu.be/fZ_kO8nyGMs',
-        type3 : 'https://youtu.be/s3yDnr94uPY',
+        type3 : 'https://youtu.be/M_PfxrnDoZs',
         type4 : 'https://youtu.be/etrzdTGOJWU'
     }  
 
