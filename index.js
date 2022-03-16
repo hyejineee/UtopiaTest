@@ -16,15 +16,28 @@ const preload = ()=>{
 
     introPng.src = './images/intro.png'
     introAni.src = './images/intro.webp'
-    
-    for(let i =1; i<9; i++){
-        webps[i] = new Image()
-        pngs[i] = new Image()
-
-        webps[i].src = `./images/${i}.webp`
-        pngs[i].src = `./images/${i}.png`
+    nextPngsLoad(1)
+    nextWebpLoad(1)
+}
+const nextPngsLoad = (index)=>{
+    if(index == 9) return 
+    pngs[index] = new Image()
+    pngs[index].src = `./images/${index}.png`
+    pngs[index].onload = ()=>{
+        nextPngsLoad(index+1)
     }
 }
+
+const nextWebpLoad =(index)=>{
+    if(index == 9) return 
+
+    webps[index] = new Image()
+    webps[index].src = `./images/${index}.webp`
+    webps[index].onload = ()=>{
+        nextWebpLoad(index+1)
+    }
+
+} 
 
 const showButtonBox = (questionIndex)=>{
     console.log(webps)
