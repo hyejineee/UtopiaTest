@@ -6,7 +6,6 @@
         <meta charset="utf-8">
               
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="./index.js"></script>
 
         <style >
             .wrap {
@@ -77,7 +76,23 @@
         <script>
 
 
-            // preload()
+            const preload = ()=>{
+                let introAni = new Image()
+                let introPng = new Image()
+
+                introPng.src = './images/intro.png'
+                introAni.src = './images/intro.webp'
+                
+                for(let i =1; i<4; i++){
+                    let webp = new Image()
+                    let png = new Image()
+
+                    webp.src = `./images/${i}.webp`
+                    png.src = `./images/${i}.png`
+                }
+            }
+
+            preload()
 
             $(window).load(()=>{
                 $('.loading-notice').css('display','none')
