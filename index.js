@@ -27,7 +27,7 @@ const preload = ()=>{
 }
 
 const showButtonBox = (questionIndex)=>{
-    // document.getElementById("background-image").src = `./images/${questionIndex}.png`
+    console.log(webps)
     document.getElementById("background-image").src = pngs[questionIndex].src
     let box = document.getElementsByClassName("button-box")[0]
     box.style.display= "block"
