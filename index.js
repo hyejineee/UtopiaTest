@@ -16,8 +16,12 @@ const preload = ()=>{
 
     introPng.src = './images/intro.png'
     introAni.src = './images/intro.webp'
-    nextPngsLoad(1)
-    nextWebpLoad(1)
+
+    introAni.onload = ()=>{
+        nextPngsLoad(1)
+        nextWebpLoad(1)
+    }
+  
 }
 const nextPngsLoad = (index)=>{
     if(index == 9) return 
