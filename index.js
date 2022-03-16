@@ -17,10 +17,8 @@ const preload = ()=>{
     introPng.src = './images/intro.png'
     introAni.src = './images/intro.webp'
 
-    introAni.onload = ()=>{
-        nextPngsLoad(1)
-        nextWebpLoad(1)
-    }
+    nextPngsLoad(1)
+    nextWebpLoad(1)
   
 }
 const nextPngsLoad = (index)=>{
