@@ -1,5 +1,6 @@
 
-
+const webps = [0]
+const pngs = [0]
 const gifPlayTime = [15000,14000,8000,8000,9000,11000,14000,12000]
 
 const score = {
@@ -9,8 +10,25 @@ const score = {
     type4 : 0,
 }
 
+const preload = ()=>{
+    let introAni = new Image()
+    let introPng = new Image()
+
+    introPng.src = './images/intro.png'
+    introAni.src = './images/intro.webp'
+    
+    for(let i =1; i<9; i++){
+        webps[i] = new Image()
+        pngs[i] = new Image()
+
+        webps[i].src = `./images/${i}.webp`
+        pngs[i].src = `./images/${i}.png`
+    }
+}
+
 const showButtonBox = (questionIndex)=>{
-    document.getElementById("background-image").src = `./images/${questionIndex}.png`
+    // document.getElementById("background-image").src = `./images/${questionIndex}.png`
+    document.getElementById("background-image").src = pngs[questionIndex].src
     let box = document.getElementsByClassName("button-box")[0]
     box.style.display= "block"
 }
@@ -97,7 +115,9 @@ const handleClickTypeButton = (type)=>{
         score[type] += 1
     }
 
-    image.src = `./images/${nextQuestionIndex}.webp`
+    // image.src = `./images/${nextQuestionIndex}.webp`
+    // image.setAttribute('value', nextQuestionIndex)
+    image.src = webps[nextQuestionIndex].src
     image.setAttribute('value', nextQuestionIndex)
 
     const buttons = document.getElementsByClassName('button-image')
