@@ -6,6 +6,10 @@
         <link rel="stylesheet" href="init.css">
 
         <script>
+
+            
+
+
             const introButton = ()=>{
                 document.getElementById("background-image").src = `./images/intro.png`
                 let box = document.getElementsByClassName("button-box")[0]
@@ -16,6 +20,20 @@
                 const questionIndex = document.getElementById('background-image').getAttribute('value')*1
                 setTimeout(()=> introButton(), 9000)
             }
+
+            const preload = ()=>{
+                for(let i =1; i<4; i++){
+                    let webp = new Image()
+                    let png = new Image()
+
+                    webp.src = `./images/${i}.webp`
+                    png.src = `./images/${i}.png`
+                }
+            }
+
+            preload()
+
+            
 
         
         </script>
